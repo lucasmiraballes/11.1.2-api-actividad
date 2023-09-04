@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API GOOGLE MAPS</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCFwwh15KxPCqHiKr-xZcqhtuGxKjOpP4&libraries=places,geometry"></script>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">API de direcciones:</h1>
+        <h3 id="descripcion">En este mapa se muestra la distancia y el recorrido desde la localización que el usuario ingresa hasta las Torre de Comunicaciones de Antel.</h3>
+    </header>
+    <div id="user-input">
+        <input type="text" id="direccion" placeholder="Ingresa una dirección">
+        <button onclick="calcularRuta()">Calcular Ruta</button>
+    </div>
+    <main>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <p id="text">El <strong>Complejo Torre de las Telecomunicaciones</strong>, también conocida como Torre de Antel, Torre de las Comunicaciones o Torre Joaquín Torres García, es la sede de la Administración Nacional de Telecomunicaciones, fue proyectado por el reconocido arquitecto uruguayo Carlos Ott. Se encuentra en el barrio La Aguada de la ciudad de Montevideo en Uruguay. Fue terminado de construir en 2002. Incluye actualmente el rascacielos más alto del Uruguay.
+            <br><br>
+            <p id="text-2">Si quieres conocer más acerca del Complejo, visita el siguiente enlace: <a href="https://es.wikipedia.org/wiki/Complejo_Torre_de_las_Telecomunicaciones" target="_blank">Torre de las Comunicaciones de Antel</a></p>
+        </p>
+    </main>
+    
+    <footer>
+        Se utilizaron 4 apis de google maps: Google Maps JavaScript API, Places API, Maps Directions API y Geocoding API
+    </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCFwwh15KxPCqHiKr-xZcqhtuGxKjOpP4&callback=initMap"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCFwwh15KxPCqHiKr-xZcqhtuGxKjOpP4&libraries=places,geometry"></script>
+</head>
+
+<body>
+    <h1 id="titulo">API de direcciones:</h1>
+    <h3 id="descripcion">En este mapa se muestra la distancia y el recorrido desde la localización que el usuario coloca
+        hasta las Torres de Comunicaciones de Antel.</h3>
+    <div id="map-text">
+        <div id="map">
+        </div>
+        <p id="text">El <strong>Complejo Torre de las Telecomunicaciones</strong>, también conocida como Torre de Antel, Torre de las
+            Comunicaciones o Torre Joaquín Torres García, es la sede de la Administración Nacional de
+            Telecomunicaciones, fue proyectado por el reconocido arquitecto uruguayo Carlos Ott. Se encuentra en el
+            barrio La Aguada de la ciudad de Montevideo en Uruguay. Fue terminado de construir en 2002. Incluye
+            actualmente el rascacielos más alto del Uruguay.
+            <br><br>
+            Si quieres conocer más acerca del Complejo, visita el siguiente enlace: <a href="https://es.wikipedia.org/wiki/Complejo_Torre_de_las_Telecomunicaciones">Torre de las Comunicaciones de Antel</a>
+        </p>
+    </div>
+    <br>
+    <input type="text" id="direccion" placeholder="Ingresa una dirección">
+    <button onclick="calcularRuta()">Calcular Ruta</button>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCFwwh15KxPCqHiKr-xZcqhtuGxKjOpP4&callback=initMap"></script>
+</body>
+
+</html> -->
