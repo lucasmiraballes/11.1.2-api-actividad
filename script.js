@@ -4,7 +4,7 @@ let directionsService;
 let directionsRenderer;
 
 function initMap() {
-  mapa = new google.maps.Map(document.getElementById("map"), {
+  mapa = new google.maps.Map(document.getElementById("map"), { // Con esto creamos el mapa
     center: { lat: -34.8916185, lng: -56.1940286 }, // Coordenadas iniciales (Torre de Comunicaciones)
     zoom: 15,
   });
@@ -13,7 +13,7 @@ function initMap() {
   directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(mapa);
 
-  const torreDeComunicaciones = new google.maps.Marker({
+  const torreDeComunicaciones = new google.maps.Marker({ // Marcador para la torre
     position: { lat: -34.8916185, lng: -56.1940286 },
     map: mapa,
     title: "Torre de las comunicaciones de Antel",
@@ -22,19 +22,19 @@ function initMap() {
 
 
 function calcularRuta() {
-  const direccionUsuario = document.getElementById("direccion").value;
+  const direccionUsuario = document.getElementById("direccion").value; // donde el usuario escribe la localizacion
 
   geocoder.geocode({ address: direccionUsuario }, function (results, status) {
     if (status === "OK") {
-      const destino = results[0].geometry.location;
+      const destino = results[0].geometry.location; // el primer destino que recibe y muestra
 
-      const solicitudRuta = {
-        origin: direccionUsuario, // La dirección ingresada por el usuario
-        destination: "Agraciada 2424 Salto", // Reemplaza con la dirección de tu destino fijo
-        travelMode: "DRIVING", // Puedes cambiar esto a "WALKING" o "TRANSIT" si lo deseas
+      const solicitudRuta = { 
+        origin: direccionUsuario, // La dirección que ingresa el usuario
+        destination: "Torre de comunicaciones", 
+        travelMode: "DRIVING", // Puede ser "WALKING" para trayecto a pie o "TRANSIT"
       };
 
-      directionsService.route(solicitudRuta, function (result, status) {
+      directionsService.route(solicitudRuta, function (result, status) { // muestra la ruta en el mapa
         if (status === "OK") {
           directionsRenderer.setDirections(result);
         } else {
