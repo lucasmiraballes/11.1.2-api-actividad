@@ -14,7 +14,7 @@ function initMap() {
   directionsRenderer.setMap(mapa);
 
   const torreDeComunicaciones = new google.maps.Marker({ // Marcador para la torre
-    position: { lat: -34.8916185, lng: -56.1940286 },
+    position: { lat: -34.892442, lng: -56.1946191 },
     map: mapa,
     title: "Torre de las Telecomunicaciones de Antel",
   });
@@ -30,7 +30,7 @@ function calcularRuta() {
 
       const solicitudRuta = { 
         origin: direccionUsuario, // La dirección que ingresa el usuario
-        destination: "11800 Montevideo", 
+        destination: "Torre de las Telecomunicaciones, Montevideo Departamento de Montevideo", 
         travelMode: "DRIVING", // Puede ser "WALKING" para trayecto a pie o "TRANSIT"
       };
 
